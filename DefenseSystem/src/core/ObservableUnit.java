@@ -1,7 +1,16 @@
-
 package core;
 
+public interface ObservableUnit {
+    void registerObserver(Observer o);
+    void removeObserver(Observer o);
+    void notifyObservers(String message);
 
-public class ObservableUnit {
-    
+    String getUnitName();
+    Strength getStrength();
+    void setStrength(Strength s);
+
+    int getSoldiers();
+    int getAmmo();
+
+    void receiveBroadcast(String from, String message, Strength globalStrength);
 }
