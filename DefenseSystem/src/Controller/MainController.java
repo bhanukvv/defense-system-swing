@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 import core.*;
 
 import javax.swing.*;
@@ -20,25 +20,26 @@ public class MainController extends javax.swing.JFrame implements Observer {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane5 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         SelectUnit = new javax.swing.JLabel();
         cmbUnits = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
         btnAreaClear = new javax.swing.JToggleButton();
         lblSoldiers = new javax.swing.JLabel();
         lblAmmo = new javax.swing.JLabel();
-        lblOxygen = new javax.swing.JLabel();
+        lblPosition = new javax.swing.JLabel();
         lblEnergy = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblOxygen = new javax.swing.JLabel();
+        lblStrength = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        subChat = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
         heliChat = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        groupActivity = new javax.swing.JTextArea();
-        jScrollPane4 = new javax.swing.JScrollPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
         tankChat = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        subChat = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        groupActivity = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         textPrivateMessage = new javax.swing.JTextField();
         btnSendPrivate = new javax.swing.JButton();
 
@@ -47,87 +48,76 @@ public class MainController extends javax.swing.JFrame implements Observer {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        SelectUnit.setBackground(new java.awt.Color(255, 255, 255));
-        SelectUnit.setFont(new java.awt.Font("Calibri Light", 1, 18)); // NOI18N
-        SelectUnit.setText("Select Unit :");
+        SelectUnit.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        SelectUnit.setText("Select Defense");
 
-        cmbUnits.setFont(new java.awt.Font("Calibri Light", 1, 12)); // NOI18N
-        cmbUnits.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select Unit", "Helicopter", "Tank", "Submarine" }));
+        cmbUnits.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Defense" }));
         cmbUnits.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbUnitsActionPerformed(evt);
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Calibri Light", 1, 18)); // NOI18N
-        jLabel1.setText("Area Clear :");
-
-        btnAreaClear.setFont(new java.awt.Font("Calibri Light", 1, 12)); // NOI18N
-        btnAreaClear.setText("OFF");
+        btnAreaClear.setText("Area Clear");
         btnAreaClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAreaClearActionPerformed(evt);
             }
         });
 
-        lblSoldiers.setBackground(new java.awt.Color(255, 255, 255));
-        lblSoldiers.setFont(new java.awt.Font("Calibri Light", 1, 18)); // NOI18N
-        lblSoldiers.setText("Soldiers :");
+        lblSoldiers.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        lblSoldiers.setText("Soldier Count");
 
-        lblAmmo.setBackground(new java.awt.Color(255, 255, 255));
-        lblAmmo.setFont(new java.awt.Font("Calibri Light", 1, 18)); // NOI18N
-        lblAmmo.setText("Ammo    :");
+        lblAmmo.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        lblAmmo.setText("Ammo Count");
 
-        lblOxygen.setBackground(new java.awt.Color(255, 255, 255));
-        lblOxygen.setFont(new java.awt.Font("Calibri Light", 1, 18)); // NOI18N
-        lblOxygen.setText("Oxygen  :");
+        lblPosition.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        lblPosition.setText("Position");
 
-        lblEnergy.setBackground(new java.awt.Color(255, 255, 255));
-        lblEnergy.setFont(new java.awt.Font("Calibri Light", 1, 18)); // NOI18N
-        lblEnergy.setText("Energy   :");
+        lblEnergy.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        lblEnergy.setText("Energy");
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Calibri Light", 1, 18)); // NOI18N
-        jLabel2.setText("Strength:");
+        lblOxygen.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        lblOxygen.setText("Oxygen");
 
-        subChat.setEditable(false);
-        subChat.setBackground(new java.awt.Color(255, 255, 255));
-        subChat.setColumns(20);
-        subChat.setFont(new java.awt.Font("Calibri Light", 1, 12)); // NOI18N
-        subChat.setRows(5);
-        subChat.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Submarine Private Chat", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri Light", 1, 12))); // NOI18N
-        jScrollPane1.setViewportView(subChat);
+        lblStrength.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        lblStrength.setText("Strength");
 
         heliChat.setEditable(false);
         heliChat.setBackground(new java.awt.Color(255, 255, 255));
         heliChat.setColumns(20);
-        heliChat.setFont(new java.awt.Font("Calibri Light", 1, 12)); // NOI18N
         heliChat.setRows(5);
-        heliChat.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Helicopter Private Chat ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri Light", 1, 12))); // NOI18N
-        jScrollPane2.setViewportView(heliChat);
-
-        groupActivity.setEditable(false);
-        groupActivity.setBackground(new java.awt.Color(255, 255, 255));
-        groupActivity.setColumns(20);
-        groupActivity.setFont(new java.awt.Font("Corbel Light", 1, 12)); // NOI18N
-        groupActivity.setRows(5);
-        groupActivity.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Group Activity Log ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri Light", 1, 12))); // NOI18N
-        jScrollPane3.setViewportView(groupActivity);
+        heliChat.setBorder(javax.swing.BorderFactory.createTitledBorder("Helicopter"));
+        jScrollPane1.setViewportView(heliChat);
 
         tankChat.setEditable(false);
         tankChat.setBackground(new java.awt.Color(255, 255, 255));
         tankChat.setColumns(20);
-        tankChat.setFont(new java.awt.Font("Corbel Light", 1, 12)); // NOI18N
         tankChat.setRows(5);
-        tankChat.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tank Private Chat ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri Light", 1, 12))); // NOI18N
-        jScrollPane4.setViewportView(tankChat);
+        tankChat.setBorder(javax.swing.BorderFactory.createTitledBorder("Tank"));
+        jScrollPane2.setViewportView(tankChat);
 
-        textPrivateMessage.setFont(new java.awt.Font("Calibri Light", 1, 12)); // NOI18N
-        textPrivateMessage.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "private msg box", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri Light", 1, 12))); // NOI18N
+        subChat.setEditable(false);
+        subChat.setBackground(new java.awt.Color(255, 255, 255));
+        subChat.setColumns(20);
+        subChat.setRows(5);
+        subChat.setBorder(javax.swing.BorderFactory.createTitledBorder("Submarine"));
+        jScrollPane3.setViewportView(subChat);
 
-        btnSendPrivate.setFont(new java.awt.Font("Calibri Light", 1, 12)); // NOI18N
-        btnSendPrivate.setText("Send Private Message");
+        groupActivity.setEditable(false);
+        groupActivity.setBackground(new java.awt.Color(255, 255, 255));
+        groupActivity.setColumns(20);
+        groupActivity.setRows(5);
+        groupActivity.setBorder(javax.swing.BorderFactory.createTitledBorder("Main Controller Group Activity"));
+        jScrollPane4.setViewportView(groupActivity);
+
+        jLabel1.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        jLabel1.setText("Soldier Count");
+
+        jLabel2.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        jLabel2.setText("Fuel Amount");
+
+        btnSendPrivate.setText("Send");
         btnSendPrivate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSendPrivateActionPerformed(evt);
@@ -139,75 +129,83 @@ public class MainController extends javax.swing.JFrame implements Observer {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(lblSoldiers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(SelectUnit, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                                .addComponent(cmbUnits, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGap(29, 29, 29)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btnAreaClear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(lblAmmo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(lblOxygen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblEnergy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
-                            .addComponent(textPrivateMessage)))
+                        .addComponent(textPrivateMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSendPrivate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(btnSendPrivate, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblEnergy)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(SelectUnit)
+                                .addGap(59, 59, 59)
+                                .addComponent(cmbUnits, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(51, 51, 51)
+                                .addComponent(btnAreaClear, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblAmmo)
+                                    .addComponent(lblStrength)
+                                    .addComponent(jLabel1)
+                                    .addComponent(lblOxygen)
+                                    .addComponent(jLabel2)
+                                    .addComponent(lblSoldiers)
+                                    .addComponent(lblPosition))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(textPrivateMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSendPrivate, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(SelectUnit)
+                            .addComponent(btnAreaClear)
+                            .addComponent(cmbUnits, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(SelectUnit, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cmbUnits)
-                                    .addComponent(btnAreaClear, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                                .addGap(30, 30, 30)
-                                .addComponent(lblSoldiers, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblSoldiers)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblAmmo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblPosition)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblStrength)
+                                .addGap(5, 5, 5)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblOxygen)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblEnergy)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel2))
-                            .addComponent(jScrollPane2))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addComponent(lblEnergy, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jScrollPane3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
-                            .addComponent(jScrollPane4))))
-                .addContainerGap(10, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textPrivateMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSendPrivate))
+                        .addGap(15, 15, 15))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -228,7 +226,7 @@ public class MainController extends javax.swing.JFrame implements Observer {
     private void btnSendPrivateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendPrivateActionPerformed
         String target=(String) cmbUnits.getSelectedItem();
         if(target==null) return;
-        String msg=txtPrivateMessage.getText();trim();
+        String msg=textPrivateMessage.getText().trim();
         if(msg.isEmpty()) return;
         sendPrivateMessageToUnit(target,msg);
         textPrivateMessage.setText("");       
@@ -258,11 +256,12 @@ public class MainController extends javax.swing.JFrame implements Observer {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel lblAmmo;
     private javax.swing.JLabel lblEnergy;
     private javax.swing.JLabel lblOxygen;
+    private javax.swing.JLabel lblPosition;
     private javax.swing.JLabel lblSoldiers;
+    private javax.swing.JLabel lblStrength;
     private javax.swing.JTextArea subChat;
     private javax.swing.JTextArea tankChat;
     private javax.swing.JTextField textPrivateMessage;
@@ -275,8 +274,9 @@ public class MainController extends javax.swing.JFrame implements Observer {
     private void toggleAreaClear(){
         boolean on=btnAreaClear.isSelected();
         btnAreaClear.setText(on? "ON":"OFF");
-        brodcastCommand("CMD:AREA_CLEAR:"+ (on ? "ON" : "OFF"));
-        appendGroup("[SYSTEM] AREA CLEAR CHANGE :"+(on ? "ON" : "OFF"));
+        // When area is clear (ON), disable shooting. When OFF, enable shooting
+        broadcastCommand("CMD:AREA_CLEAR:"+ (on ? "ON" : "OFF"));
+        appendGroup("[SYSTEM] AREA CLEAR CHANGE :"+(on ? "ON" : "OFF") + (on ? " (Shooting DISABLED)" : " (Shooting ENABLED)"));
     }
 //register units
     public void registerUnit(ObservableUnit u){
@@ -290,14 +290,14 @@ public class MainController extends javax.swing.JFrame implements Observer {
 //brodcast system
     private void broadcastCommand(String cmd){
         for(ObservableUnit u :units){
-        u.receiveBroadcast("MainController", cmd,Strength.High);
+        u.receiveBroadcast("MainController", cmd,Strength.HIGH);
         }
     }
 //private messaging    
     private void sendPrivateMessageToUnit(String unitName,String msg){
         for(ObservableUnit u : units){
             if(u.getUnitName().equals(unitName)){
-            u.receiveBroadcast("Maincontroller","CMD : PRIVATE:"+msg,Strength.HIGH);
+            u.receiveBroadcast("MainController","CMD:PRIVATE:"+msg,Strength.HIGH);
             appendPrivate(unitName,"[ME]:"+msg);
             return;
             }
@@ -324,17 +324,24 @@ public class MainController extends javax.swing.JFrame implements Observer {
     @Override
     public void onNotify(ObservableUnit unit, String message, Strength strength){
         String name=unit.getUnitName();
-        appendGroup("["+name+"] :"+message);
         
         if (message.startsWith("CHAT:")) {
             String txt = message.substring(5);
             appendPrivate(name, "[" + name + "]: " + txt);
             return;
         }
+        
+        // Only add non-CHAT messages to activity log
+        appendGroup("["+name+"] :"+message);
+        
  if (message.startsWith("ACTION:")) {
            
         } else if (message.startsWith("POSITION:")) {
-            
+            String selected = (String) cmbUnits.getSelectedItem();
+            if (selected != null && selected.equals(name)) {
+                String position = message.substring(message.lastIndexOf(" ") + 1);
+                lblPosition.setText("Position: " + position);
+            }
         } else if (message.startsWith("STATUS:")) {
            
             String selected = (String) cmbUnits.getSelectedItem();
@@ -355,11 +362,21 @@ public class MainController extends javax.swing.JFrame implements Observer {
             String v = kv[1].trim();
             try {
                 switch (k) {
-                    case "soldiers" -> soldiersV = Integer.parseInt(v);
-                    case "ammo" -> ammoV = Integer.parseInt(v);
-                    case "oxygen" -> oxygenV = Integer.parseInt(v);
-                    case "energy" -> energyV = Integer.parseInt(v);
-                    case "strength" -> strengthStr = v;
+                    case "soldiers":
+                        soldiersV = Integer.parseInt(v);
+                        break;
+                    case "ammo":
+                        ammoV = Integer.parseInt(v);
+                        break;
+                    case "oxygen":
+                        oxygenV = Integer.parseInt(v);
+                        break;
+                    case "energy":
+                        energyV = Integer.parseInt(v);
+                        break;
+                    case "strength":
+                        strengthStr = v;
+                        break;
                 }
             } catch (NumberFormatException ignored) {}
         }
@@ -372,7 +389,7 @@ public class MainController extends javax.swing.JFrame implements Observer {
     }
      private void onUnitSelected() {
         String selected = (String) cmbUnits.getSelectedItem();
-        if (selected == null) return;
+        if (selected == null || selected.equals("Select Defense")) return;
 
         // Force units to send current status so mainframe can show it
         for (ObservableUnit u : units) {
